@@ -20,6 +20,7 @@
         height: 100%;
         width: 10%;
         margin-right: 10px;
+        
         .indicator{
             position: absolute;
             display: flex;
@@ -48,6 +49,7 @@
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             cursor: pointer;
+            width: 55px;
             &.studentBar{
                  background-color: #048aff;
                 }

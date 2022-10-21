@@ -18,7 +18,7 @@
         align-items: center;
         margin: 50px auto 5px;
         button{
-            width: 150px;
+            width: fit-content;
             height: 50px;
             border: 2px solid #171717;
             border-radius: 5px;
@@ -28,8 +28,18 @@
             font-size: 30px;
             cursor: pointer;
             transition: all 200ms;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            img{
+                width: 30px;
+                margin-left: 10px;
+
+            }
             &:hover{
                 background-color: #002164;
+                
             }
         }
     }

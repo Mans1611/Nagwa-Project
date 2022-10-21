@@ -5,5 +5,5 @@
 }
 body{
   background: linear-gradient(90deg, rgb(201, 58, 86) 0%, rgba(162, 152, 116, 0.923) 100%);
-
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }

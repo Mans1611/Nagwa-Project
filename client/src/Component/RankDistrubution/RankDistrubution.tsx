@@ -6,22 +6,30 @@ import { useTimer } from '../../customhooks/Timer';
 
 const RankDistrubution:React.FC = () => {
     const {rankData} : any = useContext(QuestionIndexContext); 
-    
     let repeated = [0,0,0,0,0,0,0,0,0,0,0]; // this array will have 11 elemnts as 0 and 100 are included 
+    
+    const [showBars,setShowBars] = useState(false);
     const [repeatedMarks,setRepeatedMarks] = useState(repeated);
 
-    const countRepated = (arr : Array<number>,markWeight : number): Array<number>=>{
-        
-        for(let i = 0 ; i < arr.length;i++){
-            let index = arr[i] / markWeight ;  // I am so lucky as the marks is multiple of 10 so i a can get index directly, but it will be general function if i take the markWeight as a parmeter. 
-            repeated[index]++  
-        }
-        return repeated;
-    }
+    
+
     useEffect(():any=>{
         let isSubscribe = true;
-        if(isSubscribe && (rankData as RankDetails).sortedRanks ) 
-            setRepeatedMarks(countRepated((rankData as RankDetails).sortedRanks, 10));
+
+        const countRepated = (arr : Array<number>,markWeight : number): Array<number>=>{
+            for(let i = 0 ; i < arr.length;i++){
+                let index = arr[i] / markWeight ;  // I am so lucky as the marks is multiple of 10 so i a can get index directly, but it will be general function if i take the markWeight as a parmeter. 
+                repeated[index]++  
+            }
+            return repeated;
+        }
+        console.log((rankData as RankDetails).sortedRanks)
+
+        if(isSubscribe && (rankData as RankDetails).sortedRanks ){
+            repeated = countRepated((rankData as RankDetails).sortedRanks, 10)
+            setRepeatedMarks(repeated);
+            setShowBars(true);
+        } 
 
         return ()=> isSubscribe = false;
     },[])
@@ -29,12 +37,14 @@ const RankDistrubution:React.FC = () => {
  return (
     <div className='rankDistrubution-comp'>
         <h1 className="rankDistrubution-title">Rank Distrubtuion</h1>
-        <div style={{marginTop : Math.max(...repeatedMarks) * 50}} className="rankDistrubution">
+        {
+            showBars &&
+            <div style={{marginTop : Math.max(...repeatedMarks) * 60}} className="rankDistrubution">
             {repeatedMarks.map((repated,index)=> 
                 <div key={index} className='bar-container'>
                     {(rankData.finalScore / 10  ) === index && 
                     <div style={{bottom : (40 * repated)  }} className="indicator">
-                        your position
+                        <span>your position</span>
                         <img src={arrow}/>
 
                     </div> }
@@ -42,7 +52,8 @@ const RankDistrubution:React.FC = () => {
                     <div style={{height: 40 * repated}}  className={`bar ${(rankData.finalScore / 10  ) === index ? 'studentBar' : ''}`}>{index * 10 }</div>
                 </div>)}
        
-        </div>
+            </div>
+        }
     </div>
   )
 }

@@ -1,10 +1,12 @@
 .circlePercentage-container{
+
     padding: 5px;
     position: relative;
     background-color: #dddddd99;
     padding: 10px;
     border-radius: 10px;
     height: fit-content;
+    text-align: center;
     h2{
         text-align: center;
         font-size: 40px;
@@ -29,12 +31,16 @@
         }
     }
     .percentage-number{
-        font-size: 40px;
+        font-size: 50px;
         position: absolute;
         color: #373737;
-        top: 60%;
+        top: 55%;
         right: 50%;
        transform: translate(50%,-50%);
+    }
+
+    h4{
+        font-size: 25px ;
     }
 
 }

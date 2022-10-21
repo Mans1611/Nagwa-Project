@@ -59,7 +59,7 @@ const DisplayedWord:React.FC <{word:Word, quizezDetails:QuizDetails ,setQuizDeta
         <div className="word-container">
             <h1>{word.word}</h1>
         </div>
-        <h2 className="qustion">Which pos is the word above?</h2>
+        <h2 className="qustion">What is the type of the word above?</h2>
 
         <div className="choices-container">
             {choices.map((choice,index) => <Choice word = {word} setPickedAnswer ={setPickedAnswer} key={index} choice={choice}/> )}
@@ -76,12 +76,12 @@ const DisplayedWord:React.FC <{word:Word, quizezDetails:QuizDetails ,setQuizDeta
         { (word.answer || pickedAnswer !== null ) && (
             (answerStatus === true || word.answer === word.pos) ?
                 <div className="answer green">
-                    <img src={correct} className="answerIcon"/>
+                  
                     {`Awesome, your answer is correct`}
                 </div>
                 :
                 <div className="answer red">
-                    <img src={wrong} className="answerIcon"/>
+                    
                     {`Wrong, your answer is incorrect`}
                 </div>
         )

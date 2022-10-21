@@ -15,6 +15,11 @@
     - Node.JS (Back-End)
     - Express.jS (Back-End)
 ## Steps
+ ### 0 - you need to clone this repo in your machine 
+ ```
+    git clone https://github.com/Mans1611/Nagwa-Project
+ ``` 
+
  ### 1 - install server dependencies : 
  ```
     cd server && npm install && cd ..
