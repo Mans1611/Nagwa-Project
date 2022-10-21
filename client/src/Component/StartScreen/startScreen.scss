@@ -1,0 +1,26 @@
+.start-screen{
+    h1{
+        color: #ffffff;
+        font-size: 48px;
+        text-align: center;
+    }
+    .button-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            font-size: 40px;
+            font-weight: 700;
+            padding: 5px 20px;
+            border-radius: 5px;
+            background-color: #00a000;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 200ms;
+            &:hover{
+                background-color: #006500;
+
+            }
+        }
+    }
+}

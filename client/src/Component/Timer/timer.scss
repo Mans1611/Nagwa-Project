@@ -1,0 +1,27 @@
+.timer-contianer{
+    background-color: #171717;
+    text-align: center;
+    padding: 10px ;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    .label{
+        font-size: 35px;
+        color : #ffffff;
+    }
+    .timer-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .timer{
+            width: 60px;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            color: #00379e;
+            margin: auto 5px;
+            font-size: 40px;
+            font-weight: 500;
+        }
+    }
+
+}

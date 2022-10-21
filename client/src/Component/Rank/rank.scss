@@ -1,0 +1,36 @@
+.rank{
+    padding: 10px;
+    .rank-title{
+        color: #ffffff;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 700;
+    }
+    .statistics-container{
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .button-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px auto 5px;
+        button{
+            width: 150px;
+            height: 50px;
+            border: 2px solid #171717;
+            border-radius: 5px;
+            background-color: #0052f7;
+            outline: none;
+            color: #ffffff;
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 200ms;
+            &:hover{
+                background-color: #002164;
+            }
+        }
+    }
+}

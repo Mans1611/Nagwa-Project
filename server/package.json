@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.ts",
-    "build": "npx tsc"
+    "start": "cd build && node index.js",
+    "build": "npx tsc",
+    "dev" : "nodemon index.ts"
   },
   "author": "Mansour Mohamed",
   "license": "ISC",

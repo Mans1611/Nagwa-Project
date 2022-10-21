@@ -1,0 +1,62 @@
+.rankDistrubution-comp{
+    background-color: #474747cb;
+    border-radius: 10px;
+    height: fit-content;
+    width: 50%;
+    .rankDistrubution-title{
+        color: #ffffff;
+        font-size: 50px;
+        text-align: center;
+        border-bottom: 5px solid #ffffff;
+    }
+    .rankDistrubution{
+        height: 100%;
+        display: flex;
+        padding: 0 10px;
+        
+
+    .bar-container{
+        position: relative;
+        height: 100%;
+        width: 10%;
+        margin-right: 10px;
+        .indicator{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 500;
+            color: #ffffff;
+            img{
+                width: 30px;
+                height:40px;
+
+            }
+        }
+        .bar{
+            position: absolute;
+            background-color: #dcc600;
+            border-top: 3px solid #171717;
+            transition: all 300ms;
+            text-align: center;
+            color: #ffffff;
+            font-size: 30px;
+            bottom: 0;
+            padding: 0 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            cursor: pointer;
+            &.studentBar{
+                 background-color: #048aff;
+                }
+            &:hover{
+                background-color: #048aff;
+                
+                    
+            }
+    }
+        }
+    }
+}

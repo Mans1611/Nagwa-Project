@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
+import Title from './Component/Title/Title';
 import WordsQuiz from './Component/WordsQuiz/WordsQuiz';
 
 const App: React.FC =  () => {
   return (
     <div className="App">
-      <div className="title-wrapper">
-        <h1>Nagwa</h1>
-      </div>
-
+      <Title/>
       <WordsQuiz/>
     </div>
   );

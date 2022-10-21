@@ -1,15 +1,15 @@
 .progressBar-container{
-    padding: 5px;
+    padding: 10px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-
     .progressBar{
         width: 90%;
         border-radius: 10px;
         background-color: #cccccc;
         border-radius: 10px;
-        border: 2px solid #171717;
+        //border: 2px solid #171717;
+        min-height: 40px;
         .completed{
             font-size: 26px;
             text-align: right;
@@ -17,8 +17,9 @@
             color: #eeeeee;
             padding-right: 15px;
             height: 40px;
-            background: #4ddb6f;
+            background: #00a326;
             border-radius: inherit;
+            transition: all 400ms;
         }
     }
 }
