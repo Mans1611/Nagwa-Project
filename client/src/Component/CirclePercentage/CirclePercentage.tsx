@@ -14,7 +14,7 @@ const CirclePercentage:React.FC  = () => {
                 <circle style={{strokeDashoffset: ((100 * 6) - ((100 * 6) * (rankData as RankDetails).rank / 100))}}  r = "95" cx="100" cy = "100" />
             </svg>
             <h3 className="percentage-number">{(rankData as RankDetails).rank}%</h3>
-            <h4>You are bove {(rankData as RankDetails).rank}% of students</h4>
+            <h4>You are above {(rankData as RankDetails).rank}% of students</h4>
         </div>
 
     

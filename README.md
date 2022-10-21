@@ -32,14 +32,25 @@
  ```
     cd server && npm run start 
  ``` 
+
 ### Open new terminal 
  ### 4 - run client  
  ```
     cd client && npm run start 
  ``` 
 
+## Additional Features : 
+- Time counter 10 min.
+- Question indexes, let the student nav to any question.
+- simple chart to show distrubution.
 
+![alt text](./client/src/assets/2.png)
 
+![alt text](./client/src/assets/4.png)
+
+![alt text](./client/src/assets/5.png)
+
+![alt text](./client/src/assets/3.png)
 #### Author : Mansour Moahmed
 
 

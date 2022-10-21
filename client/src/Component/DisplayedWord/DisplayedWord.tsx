@@ -12,13 +12,14 @@ const choices = ["Adverb" , "Noun" , "Adjective" , "Verb"];
 const DisplayedWord:React.FC <{word:Word, quizezDetails:QuizDetails ,setQuizDetails : Function}> = ({word, quizezDetails,setQuizDetails}) => {
 
     const {currentIndex,setCurrentIndex, words, setIndexScreen} : any = useContext(QuestionIndexContext)
-    const  [pickedAnswer, setPickedAnswer] = useState(null); // this variable is carry the user's answer like : adverb,noun etc...
+    const [pickedAnswer, setPickedAnswer] = useState(null); // this variable is carry the user's answer like : adverb,noun etc...
     const [answerStatus,setAnswerStatus] = useState(false);  // this answer will carry the answer wheter it is right or false.
     
     // events
-    const previousQuestion = ()=>{setCurrentIndex(currentIndex - 1);setPickedAnswer(null)} // function to move backword.
-    const pickQuestion = (index :Number)=>{setCurrentIndex(index);setPickedAnswer(null)}; // function to move to any question.
-    const nextQuestion = ()=>{setCurrentIndex(currentIndex + 1);setPickedAnswer(null)}   // function to remove forward.
+    // aslo I clear the answerStaustes in each event as it cause a bug when move tow previous wrong answer it show that the answer is correct
+    const previousQuestion = ()=>{setCurrentIndex(currentIndex - 1);setAnswerStatus(false);setPickedAnswer(null)} // function to move backword. 
+    const pickQuestion = (index :Number)=>{setCurrentIndex(index);setAnswerStatus(false);setPickedAnswer(null)}; // function to move to any question.
+    const nextQuestion = ()=>{setCurrentIndex(currentIndex + 1);setAnswerStatus(false);setPickedAnswer(null)}   // function to remove forward.
     
 
     // this function will check the answer wheter it is right or false, and upadte question details.
@@ -76,7 +77,6 @@ const DisplayedWord:React.FC <{word:Word, quizezDetails:QuizDetails ,setQuizDeta
         { (word.answer || pickedAnswer !== null ) && (
             (answerStatus === true || word.answer === word.pos) ?
                 <div className="answer green">
-                  
                     {`Awesome, your answer is correct`}
                 </div>
                 :
