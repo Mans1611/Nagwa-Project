@@ -8,12 +8,13 @@
 ## Requirements :
 ### you should have node in your machine.
 ## Language :  
-### TypeScript
+### TypeScript 
+
 
 ## Tools : 
-    - React (Front-End)
-    - Node.JS (Back-End)
-    - Express.jS (Back-End)
+- React (Front-End)
+- Node.JS (Back-End)
+- Express.jS (Back-End)
 ## Steps
  ### 0 - you need to clone this repo in your machine 
  ```
