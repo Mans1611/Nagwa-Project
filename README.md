@@ -1,6 +1,6 @@
 # Words Categorization App
 
-### This app is developed for Nagwa cooding test.
+### This app was developed for Nagwa cooding test.
 ## About:
 ### This app test your skills in english words, and how well you know adverb,adjective etc... 
 ### There is a timer for the quiz which is 10 min . 
